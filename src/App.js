@@ -5,6 +5,8 @@ import Jokes from './components/Jokes';
 import JokeCategories from './components/JokeCategories';
 import Navbar from './components/Navbar';
 import JokeResults from './components/JokeResults';
+import RBNavbar from './components/RBNavbar';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   const [jokes, loadJokes] = useState([])
@@ -80,7 +82,7 @@ function App() {
     return (
       <button onClick={() => {
         setCategory(category)
-      }} className="btn btn-primary badge d-block mb-2" key={index} >
+      }} className="btn btn-outline-info badge-pill badge d-block mb-2" key={index} >
         {category}
       </button>
     )
@@ -91,7 +93,19 @@ function App() {
 
   return (
     <div className="App ">
-      <Navbar onSearch={searchJokes} />
+      {/* <Navbar onSearch={searchJokes} /> */}
+      <RBNavbar onSearch={searchJokes}/>
+      {/* <Switch>
+        <Route exact path="/about">
+          < Jokes/>
+        </Route>
+        <Route exact path="/login">
+          <Jokes />
+        </Route>
+        <Route exact path="/">
+          <Jokes />
+        </Route>
+        </Switch> */}
       <header className="App-header ">
         <h1 className='text-white'><u> You're welcome to JokaJoke</u></h1>
         <div className='row'>

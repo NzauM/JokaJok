@@ -1,0 +1,70 @@
+{
+  "jokes": [
+    {
+      "category": "Programming",
+      "type": "single",
+      "joke": "A SQL statement walks into a bar and sees two tables.\nIt approaches, and asks \"may I join you?\"",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 5,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "single",
+      "joke": "Doctor: \"I have some news about your baby.\"\nParents: \"Don't tell us the gender, we want to keep it a surprise.\"\nDoctor: \"Oh I get it, you're those type of people. Okay, well IT is not breathing.\"",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 138,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "What is the difference between the Constitutions of the USA and the USSR? Don't both of them guarantee freedom of speech?",
+      "delivery": "Yes, but the Constitution of the USA also guarantees freedom after the speech.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": true,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 181,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "Why is every gender equality officer female?",
+      "delivery": "Because it's cheaper.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": true,
+        "explicit": false
+      },
+      "id": 61,
+      "safe": false,
+      "lang": "en"
+    }
+  ]
+}

@@ -1,6 +1,18 @@
 import React from 'react';
 
 function Jokes({ jokes,searchedJokes }) {
+    function saveJoke(data){
+        console.log(data)
+        fetch(" http://localhost:3000/jokes",{
+            method: "POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(data)            
+        })
+        .then((resp)=>resp.json())
+        .then((data)=>{
+            console.log(`${data.category} has been saved`)
+        })
+    }
     console.log(jokes)
     // let displayJokes;
     // if (jokes.length > 1) {
@@ -25,10 +37,15 @@ function Jokes({ jokes,searchedJokes }) {
                         <div className='card-footer'>
                             <div className="row">
                                 <div className='col-6 text-small'>
+                                    <p className='badge badge-pill badge-info'>
                                     {joke.category}
+                                    </p>
+                                   
                                 </div>
                                 <div className='col-6'>
-                                    {joke.type}
+                                    <button onClick={(()=>{
+                                            saveJoke(joke)
+                                    })} className='btn btn-outline-info badge badge-pill'>Save</button>
                                 </div>
                             </div>
                         </div>
