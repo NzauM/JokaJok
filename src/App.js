@@ -6,7 +6,8 @@ import JokeCategories from './components/JokeCategories';
 import Navbar from './components/Navbar';
 import JokeResults from './components/JokeResults';
 import RBNavbar from './components/RBNavbar';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import SavedJokes from './components/SavedJokes';
 
 function App() {
   const [jokes, loadJokes] = useState([])
@@ -14,6 +15,7 @@ function App() {
   const [jokeCats, loadJokesCategories] = useState([])
   const [searchTerm, setSearchTerm] = useState("")
   const [searchedJokes, loadSearchedJokes] = useState("")
+  const [mysavedJokes, setSavedJokes] = useState([])
 
   let myUrl = `https://v2.jokeapi.dev/joke/${category}?amount=9?type=twoPart`
 
@@ -31,6 +33,14 @@ function App() {
   // }
 
 
+  useEffect(()=>{
+      fetch("http://localhost:3000/jokes")
+        .then((resp)=>resp.json())
+        .then((data)=>{
+          console.log(data)
+          setSavedJokes(data)
+        })
+  },[])
 
 
   useEffect(() => {
@@ -94,19 +104,29 @@ function App() {
   return (
     <div className="App ">
       {/* <Navbar onSearch={searchJokes} /> */}
-      <RBNavbar onSearch={searchJokes}/>
-      {/* <Switch>
-        <Route exact path="/about">
-          < Jokes/>
-        </Route>
-        <Route exact path="/login">
-          <Jokes />
+      
+      <Router>
+      <RBNavbar onSearch={searchJokes}/>  
+        <Switch>
+          <Route exact path="/savedJokes">
+          <header className="App-header ">
+        <h1 className='text-white'><u> Saved Jokes</u></h1>
+        <div className='row'>
+          <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>
+            {/* <JokeCategories categories={jokeCats}/> */}
+            {/* {categories} */}
+          </div>
+          <div className='col-md-9'>
+          <SavedJokes jokes={mysavedJokes}/>
+          </div>
+
+
+        </div>
+          
+          </header>
         </Route>
         <Route exact path="/">
-          <Jokes />
-        </Route>
-        </Switch> */}
-      <header className="App-header ">
+        <header className="App-header ">
         <h1 className='text-white'><u> You're welcome to JokaJoke</u></h1>
         <div className='row'>
           <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>
@@ -120,23 +140,12 @@ function App() {
 
 
         </div>
-
-
-
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-    </div>
+        </header>
+        </Route>
+        </Switch>
+      </Router>
+      </div>
+     
   );
 }
 
