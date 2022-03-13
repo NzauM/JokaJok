@@ -8,6 +8,7 @@ import JokeResults from './components/JokeResults';
 import RBNavbar from './components/RBNavbar';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import SavedJokes from './components/SavedJokes';
+import PunMaster from './components/PunMaster'
 
 function App() {
   const [jokes, loadJokes] = useState([])
@@ -16,6 +17,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("")
   const [searchedJokes, loadSearchedJokes] = useState("")
   const [mysavedJokes, setSavedJokes] = useState([])
+  const [myPun,loadPun] = useState([])
 
   let myUrl = `https://v2.jokeapi.dev/joke/${category}?amount=9?type=twoPart`
 
@@ -31,6 +33,12 @@ function App() {
 
 
   // }
+
+  useEffect(()=>{
+    fetch("https://v2.jokeapi.dev/joke/any?type=twopart")
+      .then((resp)=>resp.json())
+      .then((data)=>loadPun(data))
+  },[])
 
 
   useEffect(()=>{
@@ -118,6 +126,23 @@ function App() {
           </div>
           <div className='col-md-9'>
           <SavedJokes jokes={mysavedJokes}/>
+          </div>
+
+
+        </div>
+          
+          </header>
+        </Route>
+        <Route exact path="/punmasters">
+          <header className="App-header ">
+        <h1 className='text-white mb-3 mt-0'><u> GET ON BOARD PUN MASTERS </u>😊😊</h1>
+        <div className='row'>
+          <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>
+            {/* <JokeCategories categories={jokeCats}/> */}
+            {/* {categories} */}
+          </div>
+          <div className='col-md-9'>
+          <PunMaster pun={myPun}/>
           </div>
 
 

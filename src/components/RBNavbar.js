@@ -26,7 +26,7 @@ function RBNavbar({onSearch}){
       >
         <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link exact="true" href="/savedJokes">Saved Jokes</Nav.Link>
-        <Nav.Link exact="true" href="/savedJokes">Pun Masters</Nav.Link>
+        <Nav.Link exact="true" href="/punmasters">Pun Masters</Nav.Link>
       </Nav>
         </Col>
         <Col>
