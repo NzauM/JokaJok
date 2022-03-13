@@ -19,8 +19,8 @@ function Jokes({ jokes,searchedJokes }) {
         const displayJokes = jokes.map((joke) => {
             return (
                 <div  //style={{ marginRight: 10 + 'px' }} className='col-md-4 card mb-2'//
-                    key={joke.id} className={searchedJokes?'d-none col-md-4 card mb-2' : 'col-md-4 card mb-2'} >
-                    <div className='card-body'>
+                    key={joke.id} className={searchedJokes?'d-none col-md-4 card mb-2 cardWords' : 'col-md-4 card mb-2'} >
+                    <div className='card-body cardWords'>
                         {/* <div className='card-title'>
                         {joke.category}
                     </div> */}

@@ -98,6 +98,73 @@
       "safe": true,
       "id": 290,
       "lang": "en"
+    },
+    {
+      "category": "Spooky",
+      "type": "twopart",
+      "setup": "What happened to the cannibal who showed up late to Halloween dinner?",
+      "delivery": "They gave him the cold shoulder.",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": false,
+      "id": 311,
+      "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "How did Harry Potter get down the hill?",
+      "delivery": "Walking...\nJK, Rolling.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 206,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "Why is it so hard to break up with a Japanese girlfriend?",
+      "delivery": "You have to drop the bomb twice before she gets it.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": true,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 229,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "single",
+      "joke": "I was going to tell a dead baby joke. But I decided to abort.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 207,
+      "safe": false,
+      "lang": "en"
     }
   ]
 }

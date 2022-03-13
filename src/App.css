@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+ 
+}
+
+.cardWords{
+   font-family: 'Dosis', sans-serif;
 }
 
 .App-logo {

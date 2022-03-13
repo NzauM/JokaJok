@@ -9,6 +9,7 @@ function PunMaster({ pun }) {
         if(punAnswer.includes(userResp)){
             alert("You are such a genius")
             alert(`The answer is ${punAnswer}`)
+            setShowAnswer(true)
         }
         else{
             alert("Not yet there? Try Again?")
@@ -27,7 +28,7 @@ function PunMaster({ pun }) {
                                 Category:<span className='badge badge-pill btn-outline-info'>{pun.category}</span>
                             </p>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body cardWords">
                             {/* <h5 class="card-title">Special title treatment</h5> */}
                             <p className="card-text">{pun.setup}</p>
                             <a href="#" onClick={()=>{

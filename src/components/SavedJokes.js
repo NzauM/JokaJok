@@ -6,7 +6,7 @@ function SavedJokes({jokes}){
         return (
             <div  //style={{ marginRight: 10 + 'px' }} className='col-md-4 card mb-2'//
                 key={joke.id} className= 'col-md-4 card mb-2'>
-                <div className='card-body'>
+                <div className='card-body cardWords'>
                     {/* <div className='card-title'>
                     {joke.category}
                 </div> */}
