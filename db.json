@@ -165,6 +165,56 @@
       "id": 207,
       "safe": false,
       "lang": "en"
+    },
+    {
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What do you call a pile of kittens?",
+      "delivery": "A meowntain.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 130,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "joke": "Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 27,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "9/11 jokes are not funny.",
+      "delivery": "The other 2 though, are hilarious!",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": true,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 77,
+      "safe": false,
+      "lang": "en"
     }
   ]
 }

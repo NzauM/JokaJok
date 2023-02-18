@@ -13,7 +13,7 @@ function RBNavbar({onSearch}){
     }
     return (
         <Row>
-          <Navbar style={navStyle} bg="light" expand="lg">
+          <Navbar style={navStyle} bg="" expand="lg">
   {/* <Container fluid> */}
     <Navbar.Brand href="/">JokaJoke</Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />

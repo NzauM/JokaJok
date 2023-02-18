@@ -18,18 +18,18 @@ function Jokes({ jokes,searchedJokes }) {
     // if (jokes.length > 1) {
         const displayJokes = jokes.map((joke) => {
             return (
-                <div  //style={{ marginRight: 10 + 'px' }} className='col-md-4 card mb-2'//
+                <div  // className='col-md-4 card mb-2'//
                     key={joke.id} className={searchedJokes?'d-none col-md-4 card mb-2 cardWords' : 'col-md-4 card mb-2'} >
-                    <div className='card-body cardWords'>
+                    <div className='card-body  cardWords'>
                         {/* <div className='card-title'>
                         {joke.category}
                     </div> */}
 
 
-                        <div className=''>
+                        <div className='text-truncate'>
                             {joke.setup ? joke.setup : joke.joke}
                         </div>
-                        <div className='text-sm-center font-weight-bold'>
+                        <div className='text-truncate text-sm-center font-weight-bold'>
                             {joke.delivery}
                         </div>
 
@@ -89,7 +89,7 @@ function Jokes({ jokes,searchedJokes }) {
     //     })
     // }
 
-    console.log(displayJokes)
+    // console.log(displayJokes)
     return (
         <div className='row'>
             {displayJokes}

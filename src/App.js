@@ -8,7 +8,9 @@ import JokeResults from './components/JokeResults';
 import RBNavbar from './components/RBNavbar';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import SavedJokes from './components/SavedJokes';
-import PunMaster from './components/PunMaster'
+import PunMaster from './components/PunMaster';
+import Jokesalt from './components/Jokesalt';
+import Landing from './components/Landing';
 
 function App() {
   const [jokes, loadJokes] = useState([])
@@ -18,6 +20,7 @@ function App() {
   const [searchedJokes, loadSearchedJokes] = useState("")
   const [mysavedJokes, setSavedJokes] = useState([])
   const [myPun,loadPun] = useState([])
+  const[nextPun, setNextPun] = useState(true)
 
   let myUrl = `https://v2.jokeapi.dev/joke/${category}?amount=9?type=twoPart`
 
@@ -38,7 +41,7 @@ function App() {
     fetch("https://v2.jokeapi.dev/joke/any?type=twopart")
       .then((resp)=>resp.json())
       .then((data)=>loadPun(data))
-  },[])
+  },[nextPun])
 
 
   useEffect(()=>{
@@ -106,56 +109,81 @@ function App() {
     )
   })
 
+  const styles = {
+      backgroundImage: `url(Vorderrhein.png)`,
+      opacity: 0.7,
+      zIndex: -1
+      // height: '100vh',
+      // backgroundPosition: 'center',
+      // backgroundRepeat: 'no-repeat',
+      // backgroundSize: 'cover',
+  }
+
+  function handleGetNext(){
+    setNextPun(!nextPun)
+  }
+
 
 
 
   return (
-    <div className="App ">
+
+    <div className="App" >
+      {/* <div style={{backgroundImage: "url('./Vorderrhein.png')"}}> */}
+
+      {/* <Jokesalt jokes={jokes} searchedJokes = {searchedJokes}/> */}
       {/* <Navbar onSearch={searchJokes} /> */}
+
+      
       
       <Router>
       <RBNavbar onSearch={searchJokes}/>  
+      
+      
         <Switch>
           <Route exact path="/savedJokes">
-          <header className="App-header ">
-        <h1 className='text-white'><u> Saved Jokes</u></h1>
-        <div className='row'>
-          <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>
+          {/* <header className="App-header "> */}
+        {/* <h1 className='text-white'><u> Saved Jokes</u></h1> */}
+        <SavedJokes jokes={mysavedJokes}/>
+        {/* <div className='row'> */}
+          {/* <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}> */}
             {/* <JokeCategories categories={jokeCats}/> */}
             {/* {categories} */}
-          </div>
+          {/* </div>
           <div className='col-md-9'>
           <SavedJokes jokes={mysavedJokes}/>
-          </div>
+          </div> */}
+         
 
 
-        </div>
+        {/* </div> */}
           
-          </header>
+          {/* </header> */}
         </Route>
         <Route exact path="/punmasters">
-          <header className="App-header ">
-        <h1 className='text-white mb-3 mt-0'><u> GET ON BOARD PUN MASTERS </u>😊😊</h1>
-        <div className='row'>
+          {/* <header className="App-header "> */}
+        {/* <h1 className=' mb-3 mt-0'><u> GET ON BOARD PUN MASTERS </u>😊😊</h1> */}
+        <PunMaster pun={myPun} getNextPun={handleGetNext}/>
+        {/* <div className='row'>
           <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>
-            {/* <JokeCategories categories={jokeCats}/> */}
-            {/* {categories} */}
           </div>
           <div className='col-md-9'>
           <PunMaster pun={myPun}/>
           </div>
 
 
-        </div>
+        </div> */}
           
-          </header>
+          {/* </header> */}
         </Route>
         <Route exact path="/">
-        <header className="App-header ">
+        <Landing/>
+        <Jokesalt jokes={jokes} searchedJokes = {searchedJokes}/>
+          
+        {/* <header className="App-header ">
         <h1 className='text-white'><u> You're welcome to JokaJoke</u></h1>
         <div className='row'>
           <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>
-            {/* <JokeCategories categories={jokeCats}/> */}
             {categories}
           </div>
           <div className='col-md-9'>
@@ -165,10 +193,11 @@ function App() {
 
 
         </div>
-        </header>
+        </header> */}
         </Route>
         </Switch>
       </Router>
+      {/* </div> */}
       </div>
      
   );

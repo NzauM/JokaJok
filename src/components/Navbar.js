@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTachometerAlt, faAddressBook, faClone, faCalendarAlt, faChartBar, faCopy } from "@fortawesome/free-solid-svg-icons";
+
 
 function Navbar({onSearch}) {
     function getSearchTerm(event){
@@ -7,7 +10,8 @@ function Navbar({onSearch}) {
         onSearch(event.target.searchWord.value)
     }
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <>
+        {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="">Navbar</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -41,7 +45,38 @@ function Navbar({onSearch}) {
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
-        </nav>
+        </nav> */}
+         <nav className="navbar navbar-expand-custom navbar-mainbg">
+      <a className="navbar-brand navbar-logo" href="#">Navbar</a>
+      <button className="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <FontAwesomeIcon icon={faBars} className="text-white" />
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav ml-auto">
+          <div className="hori-selector"><div className="left"></div><div className="right"></div></div>
+          <li className="nav-item">
+            <a className="nav-link" href="javascript:void(0);"><FontAwesomeIcon icon={faTachometerAlt} />Dashboard</a>
+          </li>
+          <li className="nav-item active">
+            <a className="nav-link" href="javascript:void(0);"><FontAwesomeIcon icon={faAddressBook} />Address Book</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="javascript:void(0);"><FontAwesomeIcon icon={faClone} />Components</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="javascript:void(0);"><FontAwesomeIcon icon={faCalendarAlt} />Calendar</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="javascript:void(0);"><FontAwesomeIcon icon={faChartBar} />Charts</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="javascript:void(0);"><FontAwesomeIcon icon={faCopy} />Documents</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        </>
+        
     )
 }
 
