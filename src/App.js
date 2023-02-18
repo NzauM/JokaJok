@@ -161,8 +161,6 @@ function App() {
           {/* </header> */}
         </Route>
         <Route exact path="/punmasters">
-          {/* <header className="App-header "> */}
-        {/* <h1 className=' mb-3 mt-0'><u> GET ON BOARD PUN MASTERS </u>😊😊</h1> */}
         <PunMaster pun={myPun} getNextPun={handleGetNext}/>
         {/* <div className='row'>
           <div className={searchedJokes? 'col-md-2 d-none':'col-md-2 text-white'}>

@@ -24,12 +24,12 @@ function RBNavbar({onSearch}){
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="/">Home</Nav.Link>
+        {/* <Nav.Link href="/">Home</Nav.Link> */}
         <Nav.Link exact="true" href="/savedJokes">Saved Jokes</Nav.Link>
         <Nav.Link exact="true" href="/punmasters">Pun Masters</Nav.Link>
       </Nav>
         </Col>
-        <Col>
+        {/* <Col>
             <Form onChange={getSearchTerm} className="d-flex ">
         <FormControl
           type="search"
@@ -40,7 +40,7 @@ function RBNavbar({onSearch}){
         />
         <Button variant="outline-success">Search</Button>
       </Form>
-        </Col>
+        </Col> */}
       
       
     </Navbar.Collapse>
