@@ -33,11 +33,11 @@ function PunMaster({ pun, getNextPun}) {
     let jokeColor = randomInd(colors)
     return (
         <>
-            <div className="row mb-5 p-5">
-                <div className="col-md-7">
-                    <img src={'./yellow.png'} />
+            <div className="row mb-5 ml-20">
+                <div className="col-xl-4 col-md-12 ml-4">
+                    <img style={{marginLeft: "15%"}} src={'./yellow.png'} />
                 </div>
-                <div className="col-md-4">
+                <div className="col-xl-7 col-md-12">
                     <section className="card-section">
                         <div className="card2">
                             <div className="flip-card2">
@@ -101,7 +101,7 @@ function PunMaster({ pun, getNextPun}) {
                         </div>
                     </section>
                 </div>
-                {/* <div className="col-md-4"></div> */}
+                <div className="col-xl-1"></div>
             </div>
             <vr></vr>
             {/* <div className="container"> */}
@@ -189,7 +189,7 @@ function PunMaster({ pun, getNextPun}) {
                         <a className="card__link" href="#">Apply Now <i className="fas fa-arrow-right"></i></a>
                     </p>
                 </div> */}
-                <div className="col-md-2"></div>
+                {/* <div className="col-md-2"></div> */}
 
             </div>
             {/* </div> */}

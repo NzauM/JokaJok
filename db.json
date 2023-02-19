@@ -215,6 +215,57 @@
       "id": 77,
       "safe": false,
       "lang": "en"
+    },
+    {
+      "category": "Dark",
+      "type": "twopart",
+      "setup": "What's the difference between Jesus and a hooker?",
+      "delivery": "The look on their face when you are nailing them.",
+      "flags": {
+        "nsfw": false,
+        "religious": true,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "safe": false,
+      "id": 261,
+      "lang": "en"
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "setup": "Why are modern programming languages so materialistic?",
+      "delivery": "Because they are object-oriented.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 21,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "What does tofu and a dildo have in common?",
+      "delivery": "They're both meat substitutes.",
+      "flags": {
+        "nsfw": true,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 137,
+      "safe": false,
+      "lang": "en"
     }
   ]
 }

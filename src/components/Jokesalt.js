@@ -86,13 +86,12 @@ function Jokesalt({jokes, searchedJokes}) {
         )
     })
     return (
-        <>
-        
-        <div id="jokes"  className="row mt-5" >
+        <div className="mt-5" style={{paddingTop: "10%"}}> 
+        <div id="jokes"  className="row " >
             {displayJokes}
         </div>
+        </div>
         
-        </>
         
     )
 }
